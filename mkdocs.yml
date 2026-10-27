@@ -1,0 +1,98 @@
+site_name: Balad'Quest — Guide utilisateur
+site_description: Documentation utilisateur de Balad'Quest, l'application de balades urbaines à étapes.
+site_url: https://morahk31.github.io/ai-project-parkours-docs/
+repo_url: https://github.com/morahk31/ai-project-parkours-docs
+repo_name: ai-project-parkours-docs
+edit_uri: edit/main/docs/
+copyright: Balad'Quest — documentation utilisateur
+
+theme:
+  name: material
+  language: fr
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode clair
+  icon:
+    logo: material/map-marker-path
+  favicon: assets/favicon.svg
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - toc.follow
+
+extra_css:
+  - assets/extra.css
+
+plugins:
+  - search:
+      lang: fr
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Accueil: index.md
+  - Se balader:
+      - balader/index.md
+      - Trouver un parcours: balader/trouver-un-parcours.md
+      - Faire un parcours: balader/faire-un-parcours.md
+      - Valider sa présence: balader/valider-sa-presence.md
+      - Questionnaires: balader/questionnaires.md
+      - Médailles: balader/medailles.md
+      - Notes et commentaires: balader/notes-et-commentaires.md
+      - Sans connexion: balader/hors-ligne.md
+  - Mon compte:
+      - compte/index.md
+      - Créer un compte et se connecter: compte/creer-un-compte.md
+      - Mes parcours et mon historique: compte/mes-parcours.md
+      - Récupérer une médaille: compte/recuperer-une-medaille.md
+      - Profil et mot de passe: compte/profil.md
+      - Vie privée et suppression du compte: compte/vie-privee.md
+  - Contribuer:
+      - contribuer/index.md
+      - Créer un parcours: contribuer/creer-un-parcours.md
+      - Étapes et points de passage: contribuer/etapes.md
+      - Questionnaires: contribuer/questionnaires.md
+      - Badge et médailles: contribuer/badge.md
+      - Soumettre et publier: contribuer/soumettre-et-publier.md
+      - QR code: contribuer/qr-code.md
+      - Statistiques: contribuer/statistiques.md
+      - Modération: contribuer/moderation.md
+  - FAQ: faq.md
+  - Glossaire: glossaire.md

@@ -1,0 +1,32 @@
+/* Captures d'écran : cadre léger, taille contenue. */
+.md-typeset img.capture {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.md-typeset img.mobile {
+  width: 280px;
+  max-width: 100%;
+}
+
+.md-typeset img.desktop {
+  width: 100%;
+  max-width: 760px;
+}
+
+/* Rangée de captures mobiles côte à côte, qui passe à la ligne sur petit écran. */
+.md-typeset .captures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.md-typeset .captures figure {
+  margin: 0;
+}
+
+.md-typeset .captures figcaption {
+  max-width: 280px;
+}
